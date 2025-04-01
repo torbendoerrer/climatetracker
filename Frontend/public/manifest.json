@@ -1,0 +1,6 @@
+{
+    "name": "Climate Tracker",
+    "manifest_version": 3,
+    "version": "1.0.0",
+    "description": "web application that allows users to track their CO2 footprint resulting from transportation activities"
+}

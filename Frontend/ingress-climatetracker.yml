@@ -1,0 +1,50 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: climatetracker-ingress
+spec:
+  tls:
+    - hosts:
+        - climatetracker.group12.rke02.cloudlab.th-deg.de
+  rules:
+    - host: climatetracker.group12.rke02.cloudlab.th-deg.de
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: climatetracker-frontend
+                port:
+                  number: 80
+          - path: /users
+            pathType: Prefix
+            backend:
+              service:
+                name: climatetracker-backend
+                port:
+                  number: 8080
+          - path: /method
+            pathType: Prefix
+            backend:
+              service:
+                name: climatetracker-backend
+                port:
+                  number: 8080
+          - path: /activity
+            pathType: Prefix
+            backend:
+              service:
+                name: climatetracker-backend
+                port:
+                  number: 8080
+          - path: /authentication
+            pathType: Prefix
+            backend:
+              service:
+                name: climatetracker-backend
+                port:
+                  number: 8080
+
+      
+          

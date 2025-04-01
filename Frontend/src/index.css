@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply border-none m-0 p-0 text-zinc-900;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*:disabled {
+    @apply cursor-not-allowed;
+}
+
+*:focus-visible,
+input:focus-visible,
+input[type='checkbox']:focus-visible {
+    @apply outline outline-2 outline-green-600;
+}
+
+a {
+    text-decoration-thickness: 2px;
+}
+
+a:hover,
+button:not(:disabled):hover,
+input[type='button']:not(:disabled):hover,
+input[type='checkbox']:not(:disabled):hover,
+input[type='submit']:not(:disabled):hover {
+    @apply cursor-pointer;
+}
+
+html {
+    scrollbar-gutter: stable;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+input:not([type='checkbox']):disabled {
+    @apply bg-zinc-300 text-zinc-600;
+}
+
+input[type='checkbox']:disabled {
+    @apply appearance-none grid place-content-center w-4 h-4 zinc-300 rounded-sm;
+}
+
+input[type='checkbox'] {
+    @apply appearance-none grid place-content-center w-4 h-4 zinc-50 rounded-sm;
+}
+
+[id^='edit'][id$='UserError']::before {
+    @apply bg-red-500;
+    content: '';
+}
+
+input[type='checkbox']::before {
+    @apply w-3.5 h-3.5 opacity-100 bg-green-500 transition-opacity duration-250 ease-in-out;
+    content: '';
+}
+
+input[type='checkbox']:disabled::before {
+    @apply opacity-30;
+}
+
+input[type='checkbox']:not(:checked)::before {
+    @apply opacity-0;
+}
+
+nav > * > *:focus-visible {
+    @apply outline-slate-50;
+}
+
+.green-500 {
+    @apply bg-green-500 outline outline-2 outline-zinc-500;
+}
+
+.main-content {
+    @apply w-full sm:w-80 md:w-112 slate-100 rounded-lg p-2 sm:p-4 md:p-6;
+}
+
+.slate-100 {
+    @apply bg-slate-100 outline outline-2 outline-zinc-500;
+}
+
+.text-very-small {
+    @apply text-xs;
+}
+
+.text-small {
+    @apply text-xs md:text-sm;
+}
+
+.text-normal {
+    @apply text-sm md:text-base;
+}
+
+.text-large {
+    @apply text-base md:text-lg;
+}
+
+.text-extra-large {
+    @apply text-lg sm:text-xl md:text-2xl;
+}
+
+.zinc-50 {
+    @apply bg-zinc-50 outline outline-2 outline-zinc-500;
+}
+
+.zinc-100 {
+    @apply bg-zinc-100 outline outline-2 outline-zinc-500;
+}
+
+.zinc-300 {
+    @apply bg-zinc-300 outline outline-2 outline-zinc-500;
+}
+
+::-webkit-scrollbar {
+    @apply w-2.5;
+}
+
+html > ::-webkit-scrollbar-track {
+    @apply bg-gradient-to-b from-green-200 to-green-300;
+}
+
+html > ::-webkit-scrollbar-thumb {
+    @apply bg-slate-100 rounded-lg outline outline-1 outline-slate-600 z-10;
+}
+
+html > ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-300;
+}
+
+html > ::-webkit-scrollbar-thumb:active {
+    @apply bg-slate-200;
+}
+
+select::-webkit-scrollbar-track {
+    @apply bg-zinc-50;
+}
+
+select::-webkit-scrollbar-thumb {
+    @apply bg-zinc-400 outline-0 rounded-md;
+}
+
+select::-webkit-scrollbar-thumb:hover {
+    @apply bg-zinc-500;
+}
+
+select::-webkit-scrollbar-thumb:active {
+    @apply bg-zinc-300;
+}
+
+.breadcrumbs::-webkit-scrollbar {
+    scrollbar-width: none;
+}
+
+::-webkit-calendar-picker-indicator {
+    @apply rounded-md p-1;
+}
+
+::-webkit-calendar-picker-indicator:focus-visible {
+    @apply outline outline-2 outline-green-600;
+}
+
+::-webkit-calendar-picker-indicator:hover,
+::-webkit-datetime-edit-month-field:hover,
+::-webkit-datetime-edit-day-field:hover,
+::-webkit-datetime-edit-year-field:hover,
+::-webkit-datetime-edit-hour-field:hover,
+::-webkit-datetime-edit-minute-field:hover {
+    @apply bg-zinc-400;
+}

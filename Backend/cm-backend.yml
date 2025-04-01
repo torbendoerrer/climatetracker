@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: climatetracker-backend
+data:
+  spring_datasource_url: jdbc:postgresql://postgres.climatetracker-td-mm.svc.cluster.local:5432/climatetracker
+  spring_datasource_driver-class-name: org.postgresql.Driver
+  spring_jpa_hibernate_ddl-auto: update
