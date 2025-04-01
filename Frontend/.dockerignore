@@ -1,8 +1,0 @@
-.dockerignore
-.gitignore
-compose.yaml
-Dockerfile
-LICENSE
-README.md
-/node_modules
-/build
